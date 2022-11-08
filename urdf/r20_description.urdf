@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="r20_description">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0035491 0.32033 -0.16842"
+        rpy="0 0 0" />
+      <mass
+        value="12.438" />
+      <inertia
+        ixx="2.3693"
+        ixy="0.088648"
+        ixz="-0.03872"
+        iyy="3.2867"
+        iyz="-0.031602"
+        izz="2.1637" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://r20_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://r20_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="wheel_front_right_link">
+    <inertial>
+      <origin
+        xyz="0.396208700870725 0.144571844547815 0.35792710266045"
+        rpy="0 0 0" />
+      <mass
+        value="12.438331682443" />
+      <inertia
+        ixx="2.16450503067602"
+        ixy="0.0315308651206383"
+        ixz="0.04212193998267"
+        iyy="3.27832296207346"
+        iyz="0.124187299153229"
+        izz="2.37691630945375" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://r20_description/meshes/wheel_front_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://r20_description/meshes/wheel_front_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_front_right_joint"
+    type="continuous">
+    <origin
+      xyz="-0.35239 -0.22411 0.16152"
+      rpy="1.5314 -0.00059618 1.5607" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_front_right_link" />
+    <axis
+      xyz="0.015366 -0.020671 0.99967" />
+  </joint>
+  <link
+    name="wheel_front_left_link">
+    <inertial>
+      <origin
+        xyz="-0.283108473798885 0.295175307719044 0.40213785508857"
+        rpy="0 0 0" />
+      <mass
+        value="12.438331682443" />
+      <inertia
+        ixx="2.34184597765328"
+        ixy="0.410353827356801"
+        ixz="0.00396982650561848"
+        iyy="3.11141483980135"
+        iyz="-0.0905413509477505"
+        izz="2.36648348474859" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://r20_description/meshes/wheel_front_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://r20_description/meshes/wheel_front_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_front_left_joint"
+    type="continuous">
+    <origin
+      xyz="0.39763 -0.22026 0.16991"
+      rpy="1.5614 -0.43857 -1.5845" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_front_left_link" />
+    <axis
+      xyz="0.015366 -0.020671 0.99967" />
+  </joint>
+  <link
+    name="wheel_rear_left_link">
+    <inertial>
+      <origin
+        xyz="0.496660443639475 0.156408718729597 0.37363042371979"
+        rpy="0 0 0" />
+      <mass
+        value="12.438331682443" />
+      <inertia
+        ixx="2.16451065423992"
+        ixy="-0.0333575258367668"
+        ixz="0.0399219038571316"
+        iyy="3.29135856048791"
+        iyz="-0.0597099223677499"
+        izz="2.36387508747538" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://r20_description/meshes/wheel_rear_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://r20_description/meshes/wheel_rear_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_rear_left_joint"
+    type="continuous">
+    <origin
+      xyz="0.37759 0.66092 0.15221"
+      rpy="1.5398 -0.00041912 -1.5818" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_rear_left_link" />
+    <axis
+      xyz="0.015366 -0.020671 0.99967" />
+  </joint>
+  <link
+    name="wheel_rear_right_link">
+    <inertial>
+      <origin
+        xyz="0.238973617976979 0.457345236461402 0.356572040989878"
+        rpy="0 0 0" />
+      <mass
+        value="12.438331682443" />
+      <inertia
+        ixx="3.25085474831488"
+        ixy="-0.197665970086269"
+        ixz="0.0854684526697235"
+        iyy="2.19967449057884"
+        iyz="-0.0549482989464778"
+        izz="2.3692150633095" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://r20_description/meshes/wheel_rear_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://r20_description/meshes/wheel_rear_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_rear_right_joint"
+    type="continuous">
+    <origin
+      xyz="-0.34598 0.66096 0.15106"
+      rpy="-1.5381 -1.4198 -1.6158" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_rear_right_link" />
+    <axis
+      xyz="0.015366 -0.020671 0.99967" />
+  </joint>
+</robot>
