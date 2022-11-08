@@ -148,7 +148,7 @@
     <child
       link="wheel_front_left_link" />
     <axis
-      xyz="0.015366 -0.020671 0.99967" />
+      xyz="0.015366 -0.020671 -0.99967" />
   </joint>
   <link
     name="wheel_rear_left_link">
@@ -201,7 +201,7 @@
     <child
       link="wheel_rear_left_link" />
     <axis
-      xyz="0.015366 -0.020671 0.99967" />
+      xyz="0.015366 -0.020671 -0.99967" />
   </joint>
   <link
     name="wheel_rear_right_link">
