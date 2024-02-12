@@ -15,13 +15,13 @@ from launch_ros.descriptions import ParameterValue
 def generate_launch_description():
  
   # Set the path to this package.
-  pkg_share = FindPackageShare(package='r20_description').find('r20_description')
+  pkg_share = FindPackageShare(package='r24_description').find('r24_description')
  
   # Set the path to the RViz configuration settings
   default_rviz_config_path = os.path.join(pkg_share, 'rviz/rviz_basic_settings.rviz')
  
   # Set the path to the URDF file
-  default_urdf_model_path = os.path.join(pkg_share, 'urdf/r20_description.urdf')
+  default_urdf_model_path = os.path.join(pkg_share, 'urdf/r24_description.urdf')
  
   ########### YOU DO NOT NEED TO CHANGE ANYTHING BELOW THIS LINE ##############  
   # Launch configuration variables specific to simulation

@@ -1,0 +1,293 @@
+<sdf version='1.7'>
+  <model name='r24_description'>
+    <link name='base_link'>
+      <inertial>
+        <pose>-0.06309 -0.044994 0.008408 0 -0 0</pose>
+        <mass>24.9075</mass>
+        <inertia>
+          <ixx>2.65334</ixx>
+          <ixy>0.0787514</ixy>
+          <ixz>0.0200689</ixz>
+          <iyy>4.8009</iyy>
+          <iyz>-0.0858497</iyz>
+          <izz>3.23989</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://r24_description/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__camera_link_collision_1'>
+        <pose>0.22359 -0.00735 -0.019626 0 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://r24_description/meshes/stereocam_link.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='base_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://r24_description/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__camera_link_visual_1'>
+        <pose>0.22359 -0.00735 -0.019626 0 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://r24_description/meshes/stereocam_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <sensor name='depth_camera' type='depth'>
+        <visualize>1</visualize>
+        <update_rate>30</update_rate>
+        <camera name='camera'>
+          <horizontal_fov>1.0472</horizontal_fov>
+          <image>
+            <width>640</width>
+            <height>480</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.05</near>
+            <far>3</far>
+          </clip>
+        </camera>
+        <plugin name='depth_camera_controller' filename='libgazebo_ros_camera.so'>
+          <baseline>0.2</baseline>
+          <alwaysOn>1</alwaysOn>
+          <updateRate>0.0</updateRate>
+          <frame_name>camera_depth_frame</frame_name>
+          <pointCloudCutoff>0.5</pointCloudCutoff>
+          <pointCloudCutoffMax>3.0</pointCloudCutoffMax>
+          <distortionK1>0</distortionK1>
+          <distortionK2>0</distortionK2>
+          <distortionK3>0</distortionK3>
+          <distortionT1>0</distortionT1>
+          <distortionT2>0</distortionT2>
+          <CxPrime>0</CxPrime>
+          <Cx>0</Cx>
+          <Cy>0</Cy>
+          <focalLength>0</focalLength>
+          <hackBaseline>0</hackBaseline>
+        </plugin>
+        <pose>0.22359 -0.00735 -0.019626 3.14159 1.57079 3.14159</pose>
+      </sensor>
+    </link>
+    <joint name='back_left_joint' type='revolute'>
+      <pose relative_to='base_link'>-0.50935 0.35761 -0.17138 1.5708 -0 -1.5796</pose>
+      <parent>base_link</parent>
+      <child>back_left_link</child>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='back_left_link'>
+      <pose relative_to='back_left_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.36223 0.1262 -0.448119 0 -0 0</pose>
+        <mass>24.7847</mass>
+        <inertia>
+          <ixx>3.23005</ixx>
+          <ixy>-0.0866844</ixy>
+          <ixz>-0.0241798</ixz>
+          <iyy>4.79165</iyy>
+          <iyz>-0.0792205</iyz>
+          <izz>2.65325</izz>
+        </inertia>
+      </inertial>
+      <collision name='back_left_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://r24_description/meshes/back_left_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='back_left_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://r24_description/meshes/back_left_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='back_right_joint' type='revolute'>
+      <pose relative_to='base_link'>-0.51561 -0.35947 -0.17138 1.5708 -0 1.562</pose>
+      <parent>base_link</parent>
+      <child>back_right_link</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='back_right_link'>
+      <pose relative_to='back_right_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.354853 0.1262 0.448081 0 -0 0</pose>
+        <mass>24.7847</mass>
+        <inertia>
+          <ixx>3.23005</ixx>
+          <ixy>0.0866804</ixy>
+          <ixz>-0.0241506</ixz>
+          <iyy>4.79165</iyy>
+          <iyz>0.0792249</iyz>
+          <izz>2.65325</izz>
+        </inertia>
+      </inertial>
+      <collision name='back_right_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://r24_description/meshes/back_right_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='back_right_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://r24_description/meshes/back_right_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='front_left_joint' type='revolute'>
+      <pose relative_to='base_link'>0.43888 0.3467 -0.17138 1.5708 -0 -1.5796</pose>
+      <parent>base_link</parent>
+      <child>front_left_link</child>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='front_left_link'>
+      <pose relative_to='front_left_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.359649 0.1262 0.500186 0 -0 0</pose>
+        <mass>24.7847</mass>
+        <inertia>
+          <ixx>3.23005</ixx>
+          <ixy>-0.0866804</ixy>
+          <ixz>-0.0241506</ixz>
+          <iyy>4.79165</iyy>
+          <iyz>-0.0792249</iyz>
+          <izz>2.65325</izz>
+        </inertia>
+      </inertial>
+      <collision name='front_left_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://r24_description/meshes/front_left_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='front_left_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://r24_description/meshes/front_left_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='front_right_joint' type='revolute'>
+      <pose relative_to='base_link'>0.43366 -0.36512 -0.17138 1.5708 -0 1.562</pose>
+      <parent>base_link</parent>
+      <child>front_right_link</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='front_right_link'>
+      <pose relative_to='front_right_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.35216 0.1262 -0.501222 0 -0 0</pose>
+        <mass>24.7847</mass>
+        <inertia>
+          <ixx>3.23005</ixx>
+          <ixy>0.0866844</ixy>
+          <ixz>-0.0241798</ixz>
+          <iyy>4.79165</iyy>
+          <iyz>0.0792205</iyz>
+          <izz>2.65325</izz>
+        </inertia>
+      </inertial>
+      <collision name='front_right_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://r24_description/meshes/front_right_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='front_right_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://r24_description/meshes/front_right_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

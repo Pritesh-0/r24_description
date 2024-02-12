@@ -4,10 +4,10 @@ import launch_ros
 import os
 
 def generate_launch_description():
-    pkg_share = launch_ros.substitutions.FindPackageShare(package='r20_description').find('r20_description')
+    pkg_share = launch_ros.substitutions.FindPackageShare(package='r24_description').find('r24_description')
     default_mesh_path = os.path.join(pkg_share, "urdf")
-    default_sdf_path = os.path.join(pkg_share, "urdf/r20_description.sdf")
-    default_model_path = os.path.join(pkg_share, 'urdf/r20_description.gazebo')
+    default_sdf_path = os.path.join(pkg_share, "urdf/r24_description.sdf")
+    default_model_path = os.path.join(pkg_share, 'urdf/r24_description.gazebo')
     default_rviz_config_path = os.path.join(pkg_share, 'rviz/rviz_basic_settings.rviz')
     world_path=os.path.join(pkg_share, 'world/my_world.sdf')
     
@@ -32,9 +32,9 @@ def generate_launch_description():
     spawn_entity = launch_ros.actions.Node(
     	package='gazebo_ros', 
     	executable='spawn_entity.py',
-        arguments=['-entity', 'r20_description', '-file', default_sdf_path],
+        arguments=['-entity', 'r24_description', '-file', default_sdf_path],
         output='log',
-        # prefix=['xterm -e gdb -ex run --args']
+        #prefix=['xterm -e gdb -ex run --args']
     )
     robot_localization_node = launch_ros.actions.Node(
          package='robot_localization',
@@ -54,7 +54,7 @@ def generate_launch_description():
         launch.actions.DeclareLaunchArgument(name='use_sim_time', default_value='True',
                                             description='Flag to enable use_sim_time'),
         launch.actions.SetEnvironmentVariable(name='GAZEBO_MODEL_PATH', value=[default_mesh_path]),
-        launch.actions.ExecuteProcess(cmd=['gazebo', '--verbose', '-s', 'libgazebo_ros_init.so', '-s', 'libgazebo_ros_factory.so',world_path], output='screen'),
+        launch.actions.ExecuteProcess(cmd=['gazebo', '--verbose', '-s', 'libgazebo_ros_init.so', '-s', 'libgazebo_ros_factory.so',world_path], output='screen',prefix=['xterm -e gdb -ex run --args']),
         joint_state_publisher_node,
         robot_state_publisher_node,
         spawn_entity,

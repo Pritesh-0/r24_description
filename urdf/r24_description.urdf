@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="r24_description">
+
+  <link name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.064437631392306 -0.0451760636997012 0.00855220087790583"
+        rpy="0 0 0" />
+      <mass
+        value="24.7846622807205" />
+      <inertia
+        ixx="2.6528733745583"
+        ixy="0.0799812958011684"
+        ixz="0.0190933937240297"
+        iyy="4.7916536369371"
+        iyz="-0.0859829287168919"
+        izz="3.23043029634489" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://r24_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://r24_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Robot Footprint-->
+  <link name="base_footprint"/>
+  
+  <joint name="base_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="base_footprint"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+<!-- Front left wheel -->
+  <link
+    name="front_left_link">
+    <inertial>
+      <origin
+        xyz="0.359648861194319 0.126200419176023 0.500186369051321"
+        rpy="0 0 0" />
+      <mass
+        value="24.7846622807205" />
+      <inertia
+        ixx="3.23005139607727"
+        ixy="-0.0866803912437066"
+        ixz="-0.0241505815812914"
+        iyy="4.79165363693711"
+        iyz="-0.0792248791894818"
+        izz="2.65325227482591" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://r24_description/meshes/front_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://r24_description/meshes/front_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_joint"
+    type="continuous">
+    <origin
+      xyz="0.43888 0.3467 -0.17138"
+      rpy="1.5708 0 -1.5796" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_left_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+
+<!-- Fron right wheel -->
+  <link
+    name="front_right_link">
+    <inertial>
+      <origin
+        xyz="0.352160455575592 0.126200419178019 -0.501222296359285"
+        rpy="0 0 0" />
+      <mass
+        value="24.7846622807205" />
+      <inertia
+        ixx="3.23004894924541"
+        ixy="0.0866844020678713"
+        ixz="-0.0241797831916957"
+        iyy="4.7916536369371"
+        iyz="0.079220490700978"
+        izz="2.65325472165778" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://r24_description/meshes/front_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://r24_description/meshes/front_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_joint"
+    type="continuous">
+    <origin
+      xyz="0.43366 -0.36512 -0.17138"
+      rpy="1.5708 0 1.562" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_right_link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+
+<!-- Back left wheel -->
+  <link
+    name="back_left_link">
+    <inertial>
+      <origin
+        xyz="0.362230161554211 0.126200417296647 -0.448119364911167"
+        rpy="0 0 0" />
+      <mass
+        value="24.7846622807205" />
+      <inertia
+        ixx="3.23004894924538"
+        ixy="-0.0866844020675857"
+        ixz="-0.0241797831917133"
+        iyy="4.79165363693713"
+        iyz="-0.0792204907009766"
+        izz="2.65325472165778" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://r24_description/meshes/back_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://r24_description/meshes/back_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_left_joint"
+    type="continuous">
+    <origin
+      xyz="-0.50935 0.35761 -0.17138"
+      rpy="1.5708 0 -1.5796" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_left_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+
+<!-- Back right wheel -->
+  <link
+    name="back_right_link">
+    <inertial>
+      <origin
+        xyz="0.354852756681686 0.126200417296661 0.448080658530208"
+        rpy="0 0 0" />
+      <mass
+        value="24.7846622807205" />
+      <inertia
+        ixx="3.23005139607728"
+        ixy="0.0866803912438115"
+        ixz="-0.0241505815812926"
+        iyy="4.7916536369371"
+        iyz="0.0792248791894812"
+        izz="2.65325227482591" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://r24_description/meshes/back_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://r24_description/meshes/back_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_right_joint"
+    type="continuous">
+    <origin
+      xyz="-0.51561 -0.35947 -0.17138"
+      rpy="1.5708 0 1.562" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_right_link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+
+<!-- Camera -->
+  <link name="camera_link">
+    <inertial>
+      <origin
+        xyz="0.00103219870427068 -0.000992180667516199 -0.0149243051672608"
+        rpy="0 0 0" />
+      <mass
+        value="0.122887330510859" />
+      <inertia
+        ixx="0.000176516463699131"
+        ixy="-1.65346925714814E-06"
+        ixz="3.04702026686482E-08"
+        iyy="2.26007501698213E-05"
+        iyz="2.40974385433716E-07"
+        izz="0.000194036222460167" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://r24_description/meshes/stereocam_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://r24_description/meshes/stereocam_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="camera_joint" type="fixed">
+    <origin
+      xyz="0.22359 -0.0073495 -0.019626"
+      rpy="0 1.57 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="camera_link" />
+    <axis
+      xyz="0 0 0"/>
+  </joint>
+
+<!-- Depth camera -->
+<link name="camera_depth_optical_frame"/>
+
+<joint name="camera_depth_joint" type="fixed">
+  <origin xyz="0 0 0" rpy="0 0 -1.57"/>
+  <parent link="camera_link"/>
+  <child link="camera_depth_optical_frame"/>
+</joint>
+
+<!-- Depth camera Gazebo plugin -->
+<gazebo reference="camera_link">
+  <sensor name="depth_camera" type="depth">
+    <visualize>true</visualize>
+    <update_rate>30.0</update_rate>
+    <camera name="camera">
+      <horizontal_fov>1.047198</horizontal_fov>
+      <image>
+        <width>640</width>
+        <height>480</height>
+        <format>R8G8B8</format>
+      </image>
+      <clip>
+        <near>0.05</near>
+        <far>3</far>
+      </clip>
+    </camera>
+    <plugin name="depth_camera_controller" filename="libgazebo_ros_camera.so">
+      <baseline>0.2</baseline>
+      <alwaysOn>true</alwaysOn>
+      <updateRate>0.0</updateRate>
+      <frame_name>camera_depth_frame</frame_name>
+      <pointCloudCutoff>0.5</pointCloudCutoff>
+      <pointCloudCutoffMax>3.0</pointCloudCutoffMax>
+      <distortionK1>0</distortionK1>
+      <distortionK2>0</distortionK2>
+      <distortionK3>0</distortionK3>
+      <distortionT1>0</distortionT1>
+      <distortionT2>0</distortionT2>
+      <CxPrime>0</CxPrime>
+      <Cx>0</Cx>
+      <Cy>0</Cy>
+      <focalLength>0</focalLength>
+      <hackBaseline>0</hackBaseline>
+    </plugin>
+  </sensor>
+</gazebo>
+
+  <!-- <link name="camera_imu_optical_frame"/>
+  <joint name="imu_camera_joint" type="fixed">
+    <parent link="camera_link"/>
+    <child link="camera_imu_optical_frame"/>
+  </joint> -->
+  <link name="laser"/>
+  <joint name="lidar_joint" type="fixed">
+  <parent link="base_link"/>
+  <child link="laser"/>
+  <origin xyz="0 0 0.12" rpy="0 0 0"/>
+</joint>
+</robot>
