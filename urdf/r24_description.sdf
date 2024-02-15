@@ -18,7 +18,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://r24_description/meshes/base_link.STL</uri>
+            <uri>model://meshes/base_link.STL</uri>
           </mesh>
         </geometry>
       </collision>
@@ -27,7 +27,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://r24_description/meshes/stereocam_link.STL</uri>
+            <uri>model://meshes/stereocam_link.STL</uri>
           </mesh>
         </geometry>
         <surface>
@@ -44,7 +44,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://r24_description/meshes/base_link.STL</uri>
+            <uri>model://meshes/base_link.STL</uri>
           </mesh>
         </geometry>
       </visual>
@@ -53,7 +53,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://r24_description/meshes/stereocam_link.STL</uri>
+            <uri>model://meshes/stereocam_link.STL</uri>
           </mesh>
         </geometry>
       </visual>
@@ -128,7 +128,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://r24_description/meshes/back_left_link.STL</uri>
+            <uri>model://meshes/back_left_link.STL</uri>
           </mesh>
         </geometry>
       </collision>
@@ -137,7 +137,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://r24_description/meshes/back_left_link.STL</uri>
+            <uri>model://meshes/back_left_link.STL</uri>
           </mesh>
         </geometry>
       </visual>
@@ -177,7 +177,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://r24_description/meshes/back_right_link.STL</uri>
+            <uri>model://meshes/back_right_link.STL</uri>
           </mesh>
         </geometry>
       </collision>
@@ -186,7 +186,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://r24_description/meshes/back_right_link.STL</uri>
+            <uri>model://meshes/back_right_link.STL</uri>
           </mesh>
         </geometry>
       </visual>
@@ -226,7 +226,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://r24_description/meshes/front_left_link.STL</uri>
+            <uri>model://meshes/front_left_link.STL</uri>
           </mesh>
         </geometry>
       </collision>
@@ -235,7 +235,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://r24_description/meshes/front_left_link.STL</uri>
+            <uri>model://meshes/front_left_link.STL</uri>
           </mesh>
         </geometry>
       </visual>
@@ -275,7 +275,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://r24_description/meshes/front_right_link.STL</uri>
+            <uri>model://meshes/front_right_link.STL</uri>
           </mesh>
         </geometry>
       </collision>
@@ -284,7 +284,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://r24_description/meshes/front_right_link.STL</uri>
+            <uri>model://meshes/front_right_link.STL</uri>
           </mesh>
         </geometry>
       </visual>

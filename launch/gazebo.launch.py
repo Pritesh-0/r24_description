@@ -54,10 +54,9 @@ def generate_launch_description():
         launch.actions.DeclareLaunchArgument(name='use_sim_time', default_value='True',
                                             description='Flag to enable use_sim_time'),
         launch.actions.SetEnvironmentVariable(name='GAZEBO_MODEL_PATH', value=[default_mesh_path]),
-        launch.actions.ExecuteProcess(cmd=['gazebo', '--verbose', '-s', 'libgazebo_ros_init.so', '-s', 'libgazebo_ros_factory.so',world_path], output='screen',prefix=['xterm -e gdb -ex run --args']),
+        launch.actions.ExecuteProcess(cmd=['gazebo', '--verbose', '-s', 'libgazebo_ros_init.so', '-s', 'libgazebo_ros_factory.so',world_path], output='screen'),
         joint_state_publisher_node,
         robot_state_publisher_node,
         spawn_entity,
         robot_localization_node,
-        # rviz_node
     ])
