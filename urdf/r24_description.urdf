@@ -25,7 +25,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://r24_description/meshes/base_link.STL" />
+          filename="package://meshes/base_link.STL" />
       </geometry>
       <material
         name="">
@@ -39,7 +39,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://r24_description/meshes/base_link.STL" />
+          filename="package://meshes/base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -76,7 +76,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://r24_description/meshes/front_left_link.STL" />
+          filename="package://meshes/front_left_link.STL" />
       </geometry>
       <material
         name="">
@@ -90,7 +90,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://r24_description/meshes/front_left_link.STL" />
+          filename="package://meshes/front_left_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -131,7 +131,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://r24_description/meshes/front_right_link.STL" />
+          filename="package://meshes/front_right_link.STL" />
       </geometry>
       <material
         name="">
@@ -145,7 +145,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://r24_description/meshes/front_right_link.STL" />
+          filename="package://meshes/front_right_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -186,7 +186,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://r24_description/meshes/back_left_link.STL" />
+          filename="package://meshes/back_left_link.STL" />
       </geometry>
       <material
         name="">
@@ -200,7 +200,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://r24_description/meshes/back_left_link.STL" />
+          filename="package://meshes/back_left_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -241,7 +241,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://r24_description/meshes/back_right_link.STL" />
+          filename="package://meshes/back_right_link.STL" />
       </geometry>
       <material
         name="">
@@ -255,7 +255,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://r24_description/meshes/back_right_link.STL" />
+          filename="package://meshes/back_right_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -309,7 +309,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://r24_description/meshes/stereocam_link.STL" />
+          filename="package://meshes/stereocam_link.STL" />
       </geometry>
     </collision>
   </link>
