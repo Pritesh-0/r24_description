@@ -295,7 +295,7 @@
 <!-- Gazebo IMU -->
  <gazebo reference="imu_link">
   <sensor name="imu_sensor" type="imu">
-   <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+   <plugin filename="libgz-sim-imu-system.so" name="gz::sim::systems::Imu">
       <ros>
         <namespace>/demo</namespace>
         <remapping>~/out:=imu</remapping>
@@ -363,7 +363,7 @@
 </gazebo>
 
 <gazebo>
-  <plugin name='diff_drive' filename='libgazebo_ros_diff_drive.so'>
+  <plugin name='gz::sim::systems::DiffDrive' filename='libgz-sim-diff-drive-system.so'>
     <ros>
       <namespace>/demo</namespace>
     </ros>
@@ -470,7 +470,7 @@
         <far>3</far>
       </clip>
     </camera>
-    <plugin name="depth_camera_controller" filename="libgazebo_ros_camera.so">
+    <plugin name="CameraVideoRecorder" filename="libgz-sim-camera-video-recorder-system.so">
       <baseline>0.2</baseline>
       <alwaysOn>true</alwaysOn>
       <updateRate>0.0</updateRate>
