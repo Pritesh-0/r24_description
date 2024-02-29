@@ -365,8 +365,8 @@
   <plugin name='gz::sim::systems::DiffDrive' filename='libgz-sim-diff-drive-system.so'>
 
     <!-- wheels -->
-    <left_joint>wheel_rear_left_joint</left_joint>
-    <right_joint>wheel_rear_right_joint</right_joint>
+    <left_joint>back_left_joint</left_joint>
+    <right_joint>back_right_joint</right_joint>
 
     <!-- kinematics -->
     <wheel_separation>2.4</wheel_separation>
