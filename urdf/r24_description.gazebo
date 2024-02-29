@@ -30,8 +30,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-	      <mesh><uri>
-			      package://meshes/base_link.STL<uri> <mesh/>
+	      <mesh filename="package://meshes/base_link.STL" />
       </geometry>
       <material
         name="">
@@ -44,8 +43,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-              <mesh><uri>
-                              package://meshes/base_link.STL<uri> <mesh/>
+              <mesh filename="package://meshes/base_link.STL" />
       </geometry>
 
     </collision>
