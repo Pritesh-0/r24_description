@@ -30,8 +30,8 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://meshes/base_link.STL" />
+	      <mesh><uri>
+			      package://meshes/base_link.STL<uri> <mesh/>
       </geometry>
       <material
         name="">
@@ -44,9 +44,10 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://meshes/base_link.STL" />
+              <mesh><uri>
+                              package://meshes/base_link.STL<uri> <mesh/>
       </geometry>
+
     </collision>
   </link>
 <!--<link name="base_footprint"/> <joint name="base_joint" type="fixed"> <parent link="base_link"/> <child link="base_footprint"/> <origin xyz="0 0 0" rpy="0 0 0"/> </joint> -->
@@ -364,9 +365,6 @@
 
 <gazebo>
   <plugin name='gz::sim::systems::DiffDrive' filename='libgz-sim-diff-drive-system.so'>
-    <ros>
-      <namespace>/demo</namespace>
-    </ros>
 
     <!-- wheels -->
     <left_joint>wheel_rear_left_joint</left_joint>
@@ -387,6 +385,7 @@
 
     <odometry_frame>odom</odometry_frame>
     <robot_base_frame>base_link</robot_base_frame>
+    <topic>cmd_vel</topic>
   </plugin>
 </gazebo>
 <!-- End Gazebo -->
