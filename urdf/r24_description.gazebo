@@ -294,7 +294,8 @@
 <!-- Gazebo IMU -->
  <gazebo reference="imu_link">
   <sensor name="imu_sensor" type="imu">
-   <plugin filename="libgz-sim-imu-system.so" name="gz::sim::systems::Imu">
+	  <plugin filename="libgz-sim-imu-system.so" name="gz::sim::systems::Imu">
+		  <topic>imu_plugin</topic>
       <ros>
         <namespace>/demo</namespace>
         <remapping>~/out:=imu</remapping>
