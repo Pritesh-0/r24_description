@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <sdf version="1.4">
-  <world name="default">
+	<world name='default'>
     <model name="arena">
       <pose>0 0 0  0 0 0</pose>
       <static>true</static>
@@ -23,22 +23,6 @@
     </model>
     
     
-    <physics name="1ms" type="ignored">
-      <max_step_size>0.001</max_step_size>
-      <real_time_factor>1.0</real_time_factor>
-    </physics>
-    <plugin
-      filename="gz-sim-physics-system"
-      name="gz::sim::systems::Physics">
-    </plugin>
-    <plugin
-      filename="gz-sim-user-commands-system"
-      name="gz::sim::systems::UserCommands">
-    </plugin>
-    <plugin
-      filename="gz-sim-scene-broadcaster-system"
-      name="gz::sim::systems::SceneBroadcaster">
-    </plugin>
 
     <!--light-->
     <light type="directional" name="sun">
@@ -54,10 +38,11 @@
       </attenuation>
       <direction>-0.5 0.1 -0.9</direction>
     </light>
+
     <include>
         <name>rover</name>
         <pose>1.8 4.34 2.30 0 0 0</pose>
 	<uri>model://r24_description.gazebo</uri>
-    </include>
-  </world>
+</include>
+</world>
 </sdf>
