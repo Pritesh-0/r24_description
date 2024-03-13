@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <robot name="r24_description" xmlns:xacro="http://ros.org/wiki/xacro">
 	<gazebo>
-    <plugin
+		<!--   <plugin
       filename="gz-sim-physics-system"
       name="gz::sim::systems::Physics">
-    </plugin>
+		</plugin> -->
     <plugin
       filename="gz-sim-sensors-system"
       name="gz::sim::systems::Sensors">
