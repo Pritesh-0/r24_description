@@ -504,7 +504,7 @@
   <joint name="camera_joint" type="fixed">
     <origin
       xyz="0.22359 -0.0073495 -0.019626"
-      rpy="0 1.57 0" />
+      rpy="0 0 0" />
     <parent
       link="base_link" />
     <child
@@ -514,18 +514,18 @@
   </joint>
 
   <!-- Depth camera -->
-
-<link name="camera_depth_optical_frame"/>
+  <!---
+  <link name="camera_depth_optical_frame"/>
 
 <joint name="camera_depth_joint" type="fixed">
   <origin xyz="0 0 0" rpy="0 0 -1.57"/>
   <parent link="camera_link"/>
   <child link="camera_depth_optical_frame"/>
-</joint>
-
+  </joint> 
+  -->
 <!-- Depth camera Gazebo plugin -->
 
- <gazebo reference="camera_link">
+   <gazebo reference="camera_link">
 <sensor name="depth_camera1" type="depth_camera">
           <update_rate>10</update_rate>
           <topic>depth_camera</topic>
@@ -543,7 +543,6 @@
           </camera>
           </sensor>
 	 </gazebo> 
-
 
 
 
