@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <robot name="r24_description" xmlns:xacro="http://ros.org/wiki/xacro">
 	<gazebo>
-		<!--   <plugin
+		  <plugin
       filename="gz-sim-physics-system"
       name="gz::sim::systems::Physics">
-		</plugin> -->
+		</plugin>
     <plugin
       filename="gz-sim-sensors-system"
       name="gz::sim::systems::Sensors">
@@ -313,10 +313,6 @@
   <sensor name="imu_sensor" type="imu">
 	  <plugin filename="libgz-sim-imu-system.so" name="gz::sim::systems::Imu">
 		  <topic>imu_plugin</topic>
-      <ros>
-        <namespace>/demo</namespace>
-        <remapping>~/out:=imu</remapping>
-      </ros>
       <initial_orientation_as_reference>false</initial_orientation_as_reference>
     </plugin>
     <always_on>true</always_on>
