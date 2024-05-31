@@ -537,7 +537,12 @@
               <far>4</far>
             </clip>
           </camera>
-          </sensor>
+  </sensor>
+  <sensor name="magnet" type="magnetometer">
+	  <plugin filename="libgz-sim-magnetometer-system.so" name="gz::sim::systems::Magnetometer">
+		  <topic>mag</topic>
+	  </plugin>
+  </sensor>
 	 </gazebo> 
 
 
